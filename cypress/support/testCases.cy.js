@@ -1,7 +1,7 @@
 
 export function assignment() {
 
-  it('Executes 1-10 steps', () => {
+  it('Executes 1-10 assignment steps', () => {
     //1 - Go to website
     cy.visit('https://playground.tensorflow.org')
 
@@ -31,7 +31,7 @@ export function assignment() {
     cy.get('#play-pause-button').click()
 
     //(9 - 10) - Wait until more than 0.3, print loss-test value, stop simulation
-    cy.wait(7000)
+    checkElement();
     printLossTestVal()
     cy.get('#play-pause-button').click()
 
@@ -45,3 +45,12 @@ function printLossTestVal(){
   });
 }
 
+function checkElement(){
+  cy.get('#iter-number').then(($element) => {
+    if ($element.text() < '000,301') 
+      {
+      cy.wait(100);
+      checkElement();
+    }
+  });
+};
