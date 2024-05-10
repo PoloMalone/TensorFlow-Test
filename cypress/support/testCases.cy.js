@@ -31,7 +31,7 @@ export function assignment() {
     cy.get('#play-pause-button').click()
 
     //(9 - 10) - Wait until more than 0.3, print loss-test value, stop simulation
-    cy.wait(5500)
+    cy.wait(7000)
     printLossTestVal()
     cy.get('#play-pause-button').click()
 
