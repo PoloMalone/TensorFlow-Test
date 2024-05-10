@@ -24,4 +24,4 @@
    Once the test file is selected, Cypress will open your application in a new browser window, and the test will start automatically.
 
    You can observe the test execution in the Cypress Test Runner interface.
-   View Test Results: After the test completes, you can view the test results, including passed and failed tests, in the Cypress Test Runner    interface. Dont forget to inspect the browser console to view the printed logs.
+   After the test completes, you can view the test results, including passed and failed tests, in the Cypress Test Runner    interface. Dont forget to inspect the browser console to view the printed logs.
